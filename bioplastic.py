@@ -4,5 +4,11 @@ class bioplastic_production:
           efficiency reported in the literature."""
         self.gr_maiz_per_ha = TnMaiz_per_ha * 1000000
         self.gr_almidon_per_ha = self.gr_maiz_per_ha * almidon_per_gr_maiz
-        self.Tn_bioplastic_per_ha = (self.almidon_per_ha * bioplastic_per_almidon) / 1000000
+        self.Tn_bioplastic_per_ha = (self.gr_almidon_per_ha * bioplastic_per_almidon
+                                    /1000000)
+        self.Tn_bioplastic = 2.2 * (10**6)
         
+  
+
+    def set_bioplastic_population(million_Tn_bioplastic) -> None:
+        self.Tn_bioplastic = million_Tn_bioplastic * (10**6)
